@@ -1,0 +1,28 @@
+    <script>
+    <button onclick="callAndApply()">Click me</button>
+
+    function callAndApply() {
+        let product1 = {
+            ID: "85DF6",
+            name: "APPLE XR",
+            price: 57000,
+            mrpPrice: 62000,
+            grossProfit: function () {
+                return this.mrpPrice + this.price
+            }
+        };
+        let product2 = {
+            ID: "85DF85",
+            name: "ONE PLUS PRO",
+            price: 42000,
+            mrpPrice: 56000
+        };
+        //call()
+        console.log(product1.grossProfit.call(product1));
+        console.log(product1.grossProfit.call(product2));
+        //apply
+        console.log(product1.grossProfit.call(product1));
+        console.log(product1.grossProfit.call(product2));
+    }
+</script>
+
